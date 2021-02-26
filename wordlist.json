@@ -6,10 +6,10 @@
         "keen", "nüms", "keenen", "n poor", "veel", "mennig", "all"
     ],
     "noun": [
-        "Huus", "Pott", "Bispill", "Macker", "Vagel", "Kaptein", "Deern", "Höker", "Danzer", "Trecker", "Slötel", "Buddel", "Appel", "Büx"
+        "Huus", "Pott", "Bispill", "Macker", "Vagel", "Kaptein", "Deern", "Höker", "Danzer", "Trecker", "Slötel", "Buddel", "Appel", "Büx", "Mölk", "Wöörbook"
     ],
     "verb": [
-        "fodern", "setten", "arbeed", "sweeten", "hüüren", "hosten", "snacken", "gahn", "schrieven", "laaten", "sitten", "slaan", "köppen"
+        "fodern", "setten", "arbeed", "sweeten", "hüüren", "hosten", "snacken", "gahn", "schrieven", "laaten", "sitten", "slaan", "köppen", "abmarachen"
     ],
     "adjective": [
         "lütt", "groot", "gaperig", "old", "jung"
@@ -28,5 +28,8 @@
     ],
     "interogativ_question_pronoun": [
         "wokeen", "woneem", "wo", "wat", "worüm", "wanner", "woto", "wegen wat", "welk", "wen sien", "wen"
+    ],
+    "pronoun": [
+        "beten", "barg", "bietje", "ook"
     ]
 }

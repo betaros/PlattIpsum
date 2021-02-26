@@ -1,6 +1,7 @@
 import json
 import random
 
+
 class PlattIpsum:
 
     def __init__(self, word_count) -> None:
@@ -9,7 +10,7 @@ class PlattIpsum:
         random.seed()
         
     def load_words(self) -> None:
-        with open("wordlist.json", "r") as json_file:
+        with open("wordlist.json", "r", encoding='utf-8') as json_file:
             self.words = json.load(json_file)
     
     def create_text(self) -> str:
@@ -42,12 +43,30 @@ class PlattIpsum:
             sentence_words.append(self.get_random_word("adjective"))
             sentence = " ".join(sentence_words)
         if words_left == 5:
-            sentence_words = []
-            sentence_words.append(self.get_random_word("possesive_pronoun").title())
-            sentence = " ".join(sentence_words)                
+            sentence_words.append(self.get_random_word("article").title())
+            sentence_words.append(self.get_random_word("noun").title())
+            sentence_words.append(self.get_random_word("irregular_verb"))
+            sentence_words.append(self.get_random_word("pronoun"))
+            sentence_words.append(self.get_random_word("adjective"))
+            sentence = " ".join(sentence_words)
         if words_left == 6:
+            sentence_words.append(self.get_random_word("interogativ_question_pronoun").title())
+            sentence_words.append(self.get_random_word("noun").title())
+            sentence_words.append(self.get_random_word("irregular_verb"))
+            sentence_words.append(self.get_random_word("article"))
+            sentence_words.append(self.get_random_word("adjective"))
+            sentence_words.append(self.get_random_word("noun").title())
+            sentence = " ".join(sentence_words)
             pass
         if words_left >= 7:
+            sentence_words.append(self.get_random_word("personal_pronoun").title())
+            sentence_words.append(self.get_random_word("verb"))
+            sentence_words.append(self.get_random_word("numbers_unclear"))
+            sentence_words.append(self.get_random_word("noun").title())
+            sentence_words.append(self.get_random_word("article"))
+            sentence_words.append(self.get_random_word("possesive_pronoun"))
+            sentence_words.append(self.get_random_word("irregular_verb"))
+            sentence = " ".join(sentence_words)
             pass
 
         sentence = sentence + "."
@@ -55,7 +74,8 @@ class PlattIpsum:
         return sentence
 
     def get_random_word(self, word_type) -> str:
-        return self.words[word_type][len(self.words[word_type])-1]
+        return self.words[word_type][random.randint(1, len(self.words[word_type])-1)]
 
-plattIpsum = PlattIpsum(30)
+
+plattIpsum = PlattIpsum(300)
 print(plattIpsum.create_text())
