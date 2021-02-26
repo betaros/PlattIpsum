@@ -1,0 +1,32 @@
+{
+    "numbers_clear": [
+        "een", "twee", "dree", "veer", "fiev", "sos", "söben", "acht", "negen", "tein", "twintig", "dörtig", "veertig", "fofftig", "sostig", "söbentig", "achtig", "negentig", "hunnert", "dusend"
+    ],
+    "numbers_unclear": [
+        "keen", "nüms", "keenen", "n poor", "veel", "mennig", "all"
+    ],
+    "noun": [
+        "Huus", "Pott", "Bispill", "Macker", "Vagel", "Kaptein", "Deern", "Höker", "Danzer", "Trecker", "Slötel", "Buddel", "Appel", "Büx"
+    ],
+    "verb": [
+        "fodern", "setten", "arbeed", "sweeten", "hüüren", "hosten", "snacken", "gahn", "schrieven", "laaten", "sitten", "slaan", "köppen"
+    ],
+    "adjective": [
+        "lütt", "groot", "gaperig", "old", "jung"
+    ],
+    "article": [
+        "dat", "de", "en", "een", "n"
+    ],
+    "personal_pronoun": [
+        "ik", "du", "he", "se", "dat", "wi", "ji", "sei"
+    ],
+    "possesive_pronoun": [
+        "mien", "dien", "sien", "hör", "uns", "us", "juun", "jüm"
+    ],
+    "irregular_verb": [
+        "bün", "büst", "is", "sünd"
+    ],
+    "interogativ_question_pronoun": [
+        "wokeen", "woneem", "wo", "wat", "worüm", "wanner", "woto", "wegen wat", "welk", "wen sien", "wen"
+    ]
+}
