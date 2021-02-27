@@ -11,7 +11,7 @@ class PlattIpsum:
         random.seed()
 
     def create_text(self, word_count) -> str:
-        self.word_count = word_count
+        self.word_count = int(word_count)
 
         output = ""
         

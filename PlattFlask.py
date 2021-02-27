@@ -1,19 +1,17 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request, url_for
 from PlattIpsum import PlattIpsum
 
 app = Flask(__name__)
+platt_ipsum = PlattIpsum()
 
 
-@app.route('/')
+@app.route('/', methods=['POST', 'GET'])
 def index():
-    platt_ipsum = PlattIpsum(100)
-    return render_template('PlattFlask.html', text=platt_ipsum.create_text())
-
-
-@app.route('/<word_count>')
-def index_count(word_count=100):
-    platt_ipsum = PlattIpsum(int(word_count))
-    return render_template('PlattFlask.html', text=platt_ipsum.create_text())
+    if request.method == "POST":
+        word_count = request.form["textInput"]
+        return render_template('PlattFlask.html', text=platt_ipsum.create_text(int(word_count)))
+    else:
+        return render_template('PlattFlask.html', text=platt_ipsum.create_text(100))
 
 
 if __name__ == "__main__":

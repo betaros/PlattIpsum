@@ -32,18 +32,13 @@
         <div class="bg-light p-5 rounded">
             <h1>PlattIpsum</h1>
             <p class="lead">
-                Erstelle plattdüütschen Text
+                Schrieve plattdüütschen Text
             </p>
-            <form method="POST" action="/count">
-                <div class="row">
-                    <div class="col-md-11">
-                        <input type="range" class="form-range" min="1" max="500" step="1" value="100" onchange="updateTextInput(this.value);">
-                    </div>
-                    <div class="col-md-1">
-                        <div class="input-group mb-3">
-                            <input type="text" class="form-control" id="textInput" value="100" aria-label="Username" aria-describedby="basic-addon1">
-                        </div>
-                    </div>
+            <form method="POST" action="/">
+                <div class="input-group mb-3">
+                    <span class="input-group-text" id="basic-addon1">Wöörder</span>
+                    <input type="text" class="form-control" name="textInput" value="100">
+                    <button class="btn btn-outline-secondary" type="submit" id="button-addon2">Schrieven</button>
                 </div>
             </form>
         </div>
@@ -56,11 +51,5 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
             crossorigin="anonymous"></script>
-
-    <script>
-        function updateTextInput(val) {
-          document.getElementById('textInput').value=val;
-        }
-    </script>
 </body>
 </html>
