@@ -12,6 +12,8 @@ class PlattIpsum:
 
     def create_text(self, word_count) -> str:
         self.word_count = int(word_count)
+        if self.word_count > 100000:
+            self.word_count = 100000
 
         output = ""
         

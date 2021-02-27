@@ -8,7 +8,12 @@ platt_ipsum = PlattIpsum()
 @app.route('/', methods=['POST', 'GET'])
 def index():
     if request.method == "POST":
-        word_count = request.form["textInput"]
+        if request.form["textInput"].isnumeric():
+            word_count = int(request.form["textInput"])
+            if word_count > 100000:
+                word_count = 100000
+        else:
+            word_count = 100
         return render_template('PlattFlask.html', text=platt_ipsum.create_text(int(word_count)), word_count=word_count)
     else:
         return render_template('PlattFlask.html', text=platt_ipsum.create_text(100), word_count=100)
