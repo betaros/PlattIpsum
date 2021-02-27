@@ -9,9 +9,9 @@ platt_ipsum = PlattIpsum()
 def index():
     if request.method == "POST":
         word_count = request.form["textInput"]
-        return render_template('PlattFlask.html', text=platt_ipsum.create_text(int(word_count)))
+        return render_template('PlattFlask.html', text=platt_ipsum.create_text(int(word_count)), word_count=word_count)
     else:
-        return render_template('PlattFlask.html', text=platt_ipsum.create_text(100))
+        return render_template('PlattFlask.html', text=platt_ipsum.create_text(100), word_count=100)
 
 
 if __name__ == "__main__":
